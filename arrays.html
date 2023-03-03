@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let maanden = ["januari", "februari", "maart"];
+        maanden[3] ="april";
+        maanden[4] ="mei";
+        maanden[5] ="juni";
+        maanden.push("juli");
+        maanden.push("augustus", "september", "oktober", "november", "december");
+        document.write(`${maanden}`);
+        document.write(`<p>Er zijn ${maanden.length} maanden in de Array </p>`);
+        document.write(`<p>de maand march bevindt zich in de array op positie: ${maanden.indexOf("march")}</p>`)
+
+        let namen = [
+        "Erik", "Sofie", "Adam", "Zorro"
+        ];
+        namen = namen.sort();
+
+        document.write(`<p>De gesorteerde namen zijn: ${namen}</p>`);
+
+        let naamzoeken = prompt("welke naam wil je zoeken");
+
+        document.write(`<p>De gezochte naam ${naamzoeken} bevindt zich op de plaats ${namen.indexOf(naamzoeken)}</p>`);
+
+
+        let gebruikernaam = prompt("wat is uw volledig naam");
+        let arrayvannaam = gebruikernaam.split(" ");
+        arrayvannaam = arrayvannaam.reverse()
+
+        document.write(`<p>jouw naam genoteerd al familienaam voornaam is ${arrayvannaam.toString().replace(",", " ")}</p>`)
+    </script>
+    <p></p>
+</body>
+</html>

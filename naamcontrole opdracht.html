@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let voornaam = prompt("wat is uw voornaam")
+        let controle = naamcontrole(voornaam);
+        if (controle != false)
+        {
+            let achternaam = prompt("wat is uw achternaam");
+            controle = naamcontrole(achternaam);
+            if (controle != false)
+            {
+                document.write(`hey ${voornaam} ${achternaam}`)
+            }
+        }
+        
+        function naamcontrole(ontvangen){
+            
+            if (ontvangen == null)
+            {
+                document.write(`u heeft geanuleert`);
+                return false
+            }
+            else if (ontvangen == 0)
+            {
+                document.write(`u heeft niets ingegeven`);
+                return false
+            }
+            else if (ontvangen.length <2)
+            {
+                document.write(`u heeft minder dan twee karakters ingegeven`);
+                return false
+            }
+            else return true;
+
+            
+        }
+        
+
+    </script>
+</body>
+</html>
